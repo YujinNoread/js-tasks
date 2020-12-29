@@ -69,7 +69,7 @@ function clearArray(array) {
     }
   }
   return array;
-}
+} 
 
 console.log(value4); // [1, 2, 3]
 /*-----------Five task----------------------------------*/
@@ -203,8 +203,9 @@ console.log([1, 4, 3, 0, 4, 5, 4].reduce((sum, current) => (current%2==0) ? sum 
 console.log("Thirteen task");
 
 function group(array1,array2,array3){
+	let maxLenght=Math.max(array1.length,array2.length,array3.length)
 	let result = [];
-	for(let i=0;i<array1.length;i++) {
+	for(let i=0;i<maxLenght;i++) {
 		result.push([array1[i],array2[i],array3[i]])
 	}
 	return result
