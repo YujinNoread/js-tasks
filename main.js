@@ -186,8 +186,7 @@ function nfa(array, index) {
     if (index > 0) {
         return array[index - 1]
     } else {
-        let res = array.reverse()
-        return res[(index * -1) - 1]
+        return array[(array.length+index)]
     }
 
 }
