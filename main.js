@@ -65,7 +65,7 @@ const value4 = clearArray([1, 0, 2, false, "", 3]);
 
 function clearArray(array) {
     for (let i = array.length - 1; i >= 0; i--) {
-        if (array[i] == false) {
+        if (array[i] === false) {
             array.splice(i, 1);
         }
     }
@@ -163,12 +163,11 @@ console.log(rValue9); // [1,2,3]
 console.log("Ten task");
 
 function uni(array) {
-    let result = [];
     let obj = array.reduce((a, b) => ({
         ...a,
         [b]: (a[b] || 0) + 1
     }), {})
-    result = Object.keys(obj).filter(k => obj[k] > 1)
+    let result = Object.keys(obj).filter(k => obj[k] > 1)
     return result.map(string => +string)
 }
 
@@ -197,15 +196,15 @@ console.log(nfa(value11, -2)); // 'c';
 /*-------------------------------------------------------*/
 console.log("Twelve task");
 
-console.log([1, 4, 3, 0, 4, 5, 4].reduce((sum, current) => (current % 2 == 0) ? sum + Math.sqrt(current) : sum, 0))  // 6
+console.log([1, 4, 3, 0, 4, 5, 4].reduce((sum, current) => (current % 2 === 0) ? sum + Math.sqrt(current) : sum, 0))  // 6
 
 /*------------------Thirteen task-------------------*/
 console.log("Thirteen task");
 
 function group(array1, array2, array3) {
-    let maxLenght = Math.max(array1.length, array2.length, array3.length)
+    let maxLength = Math.max(array1.length, array2.length, array3.length)
     let result = [];
-    for (let i = 0; i < maxLenght; i++) {
+    for (let i = 0; i < maxLength; i++) {
         result.push([array1[i], array2[i], array3[i]])
     }
     return result
@@ -228,8 +227,8 @@ console.log("Fifteen task");
 
 const value15 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function implod(array, separator, even) {
-    let first = array.filter(el => el % 2 == 0);
+function imploded(array, separator, even) {
+    let first = array.filter(el => el % 2 === 0);
     let second = array.filter(el => el % 2 !== 0);
     if (even) {
         return first.join(separator)
@@ -238,8 +237,8 @@ function implod(array, separator, even) {
     }
 }
 
-console.log(implod(value15, ':', true)); // '2:4:6:8'
-console.log(implod(value15, '*', false)); // '1*3*5*7*9'
+console.log(imploded(value15, ':', true)); // '2:4:6:8'
+console.log(imploded(value15, '*', false)); // '1*3*5*7*9'
 
 /*--------------Sixteen task----------------------------*/
 console.log("Sixteen task");
