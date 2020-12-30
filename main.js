@@ -164,15 +164,15 @@ console.log("Ten task");
 
 function uni(array) {
     let result = [];
-    for (let i = 0; i < array.length; i++) {
-        for (let j = i + 1; j < array.length; j++) {
-            if (array[i] == array[j]) result.push(array[i])
-        }
-    }
-    return result
+    let obj = array.reduce((a, b) => ({
+        ...a,
+        [b]: (a[b] || 0) + 1
+    }), {})
+    result = Object.keys(obj).filter(k => obj[k] > 1)
+    return result.map(string => +string)
 }
 
-const value10 = [1, 2, 3, 4, 2, 5, 6, 1, 3];
+const value10 = [1, 2, 3, 4, 2, 5, 6, 1, 3, 1, 3, 3, 1];
 const rValue10 = uni(value10);
 
 console.log(rValue10); // [1,2,3]
@@ -186,7 +186,7 @@ function nfa(array, index) {
     if (index > 0) {
         return array[index - 1]
     } else {
-        return array[(array.length+index)]
+        return array[(array.length + index)]
     }
 
 }
@@ -251,9 +251,9 @@ function findYear(start, end) {
         array[i] = start + i;
     }
     array.forEach(function (item) {
-        if (item % 4 != 0) {
+        if (item % 4 !== 0) {
 
-        } else if (item % 100 == 0 && item % 400 != 0) {
+        } else if (item % 100 === 0 && item % 400 !== 0) {
 
         } else result.push(item)
     })
