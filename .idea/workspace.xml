@@ -26,7 +26,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -55,7 +55,9 @@
       <workItem from="1609258778532" duration="25000" />
       <workItem from="1609258865075" duration="119000" />
       <workItem from="1609259187108" duration="37000" />
-      <workItem from="1609315955390" duration="14465000" />
+      <workItem from="1609315955390" duration="17403000" />
+      <workItem from="1609747647555" duration="9000" />
+      <workItem from="1609841077663" duration="16239000" />
     </task>
     <servers />
   </component>
